@@ -1,6 +1,5 @@
 {
   "name": "website",
-  "homepage": "http://josevillar99.github.io/react-personalwebsite",
   "version": "1.1.0",
   "private": true,
   "dependencies": {
@@ -21,9 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
