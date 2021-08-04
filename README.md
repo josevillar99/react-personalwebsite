@@ -2,5 +2,5 @@
 
 ## ReactJS
 
-### Styled Components
+### Made with styled components
 
