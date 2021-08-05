@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({ lightBg }) => (lightBg ? '#7efff5' : 'black')};
+                                            //azul "cián" - negro
+    background: ${({ lightBg }) => (lightBg ? '#7698DB' : '#334B49')};
 
     @media screen and (max-width: 768) {
         padding: 150px 0;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {
     AboutNavbar, NavbarContainer, NavLogo, NavBtn, NavBtnLink, Column1, Column2, ColumnP,
-    Heading, ImgWrap, InfoContainer, InfoRow, InfoWrapper, Subtitle, TextWrapper
+    ImgWrap, InfoContainer, InfoRow, InfoWrapper, Subtitle, TextWrapper
 } from './AboutElements'
 import { about_es, about_en } from './AboutData';
 
@@ -16,7 +16,7 @@ import imageEN from '../../images/en-flag.png';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
+// import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
 
 const About = () => {
 
@@ -24,7 +24,7 @@ const About = () => {
 
     const [lan, setLan] = useState('ES');
     let idioma = localStorage.getItem('lan');
-    if (idioma == null) {
+    if (idioma === null) {
         setLan('ES')
     }
 
@@ -33,7 +33,7 @@ const About = () => {
     }, [lan]);
 
     let aboutpage_data;
-    if (idioma == 'ES') {
+    if (idioma === 'ES') {
         aboutpage_data = about_es;
     } else {
         aboutpage_data = about_en;
@@ -46,8 +46,8 @@ const About = () => {
                     <NavLogo to="/">JoseV</NavLogo>
                 </NavbarContainer>
                 <NavBtn>
-                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'ES')}><img src={imageES}></img></NavBtnLink>
-                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'EN')}><img src={imageEN}></img></NavBtnLink>
+                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'ES')}><img alt="es" src={imageES}></img></NavBtnLink>
+                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'EN')}><img alt="en" src={imageEN}></img></NavBtnLink>
                 </NavBtn>
             </AboutNavbar>
 
@@ -57,8 +57,8 @@ const About = () => {
                         <Column1>
                             <TextWrapper>
                                 <Subtitle darkText={true}>
-                                    {aboutpage_data.texts.map((item) => {
-                                            return (<ColumnP>{item}</ColumnP>)
+                                    {aboutpage_data.texts.map((item, i) => {
+                                            return (<ColumnP key={i}>{item}</ColumnP>)
                                         })
                                     }
                                 </Subtitle>
@@ -77,19 +77,19 @@ const About = () => {
                                     showArrows={false}
                                 >
                                     <div>
-                                        <img src={Image1} />
+                                        <img alt="josev" src={Image1} />
                                     </div>
                                     <div>
-                                        <img src={Image2} />
+                                        <img alt="josev" src={Image2} />
                                     </div>
                                     <div>
-                                        <img src={Image3} />
+                                        <img alt="josev" src={Image3} />
                                     </div>
                                     <div>
-                                        <img src={Image4} />
+                                        <img alt="josev" src={Image4} />
                                     </div>
                                     <div>
-                                        <img src={Image5} />
+                                        <img alt="josev" src={Image5} />
                                     </div>
                                 </Carousel>
                             </ImgWrap>

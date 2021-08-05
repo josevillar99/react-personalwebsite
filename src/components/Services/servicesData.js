@@ -13,7 +13,7 @@ export const projects_es = {
         },
         {
             icon: Icon2,
-            title: 'Intarnet Gimnasio',
+            title: 'Intranet Gimnasio',
             subtitle: 'Intranet dedicada a la gestión de los horarios de un gimnasio.'
         },
         {

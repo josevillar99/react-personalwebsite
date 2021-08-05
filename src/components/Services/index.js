@@ -11,7 +11,7 @@ const Services = ({ title, subtitle, projects }) => {
             <ServicesWrapper>
                 {projects.map((item, i) => {
                     return (
-                        <ServicesCard>
+                        <ServicesCard key={i}>
                             <ServicesIcon src={item.icon} />
                             <ServicesH2>{item.title}</ServicesH2>
                             <ServicesP>{item.subtitle}</ServicesP>

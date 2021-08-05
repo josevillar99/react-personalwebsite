@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from '../ButtonElements'
 import { Button2 } from '../ButtonRedirect'
-import { BtnWrap, Heading, ImgWrap, InfoContainer, InfoRow, InfoWrapper, Subtitle, TextWrapper, TopLine, Column1, Column2, FormContainer, FormGroup, FormLabel, FormInput, FormTextArea, FormButton, FormGroupButton, FormError } from './InfoElements'
+import { BtnWrap, Heading, ImgWrap, InfoContainer, InfoRow, InfoWrapper, Subtitle, TextWrapper,
+    TopLine, Column1, Column2, FormContainer, FormGroup, FormLabel, FormInput, FormTextArea,
+    FormGroupButton, FormError } from './InfoElements'
 
 import { ReactComponent as ImageOne } from '../../images/svg-developer.svg';
 import { ReactComponent as ImageTwo } from '../../images/svg-resume.svg';
@@ -26,7 +28,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headLine, dark
     const sendForm = () => {
         // console.log(formData);
         setError(formError)
-        // restartForm();
+        restartForm();
     }
 
     return (
@@ -39,16 +41,16 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headLine, dark
                                 <TopLine>{topLine}</TopLine>
                                 <Heading lightText={lightText}>{headLine}</Heading>
                                 <Subtitle darkText={darkText}>
-                                    {description.map((item) => {
-                                        if (item == '...') return (<br />)
-                                        return (<><p>{item}</p></>)
+                                    {description.map((item, i) => {
+                                        if (item === '...') return (<br key={i} />)
+                                        return (<span key={i}>{item}<br/></span>)
                                     })}
                                 </Subtitle>
                                 <BtnWrap>
                                     {buttonTo.includes('/')
                                         &&
                                         <Button2
-                                            to={buttonTo}
+                                            // to={buttonTo}
                                             primary={primary ? 1 : 0}
                                             dark={dark ? 1 : 0}
                                             dark2={dark2 ? 1 : 0}
@@ -102,6 +104,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headLine, dark
                                             </FormGroup>
                                             <FormGroupButton>
                                                 <Button
+                                                    to=""
                                                     onClick={sendForm}
                                                     primary={0}
                                                     dark={0}

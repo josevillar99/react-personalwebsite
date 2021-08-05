@@ -18,8 +18,8 @@ const Sidebar = ({ about, resume, project, contact, lan1, icon1, lan2, icon2, is
                     <SidebarLink to="contact" smooth={true} duration={1200} spy={true} exact='true' onClick={toggle}>{contact}</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute onClick={() => localStorage.setItem('lan', 'ES')}><img src={icon1}></img></SidebarRoute>
-                    <SidebarRoute onClick={() => localStorage.setItem('lan', 'EN')}><img src={icon2}></img> </SidebarRoute>
+                    <SidebarRoute onClick={() => localStorage.setItem('lan', 'ES')}><img alt="es" src={icon1}></img></SidebarRoute>
+                    <SidebarRoute onClick={() => localStorage.setItem('lan', 'EN')}><img alt="es" src={icon2}></img> </SidebarRoute>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>

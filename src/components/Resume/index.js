@@ -23,7 +23,7 @@ const Resume = () => {
 
     const [lan, setLan] = useState('ES');
     let idioma = localStorage.getItem('lan');
-    if (idioma == null) {
+    if (idioma === null) {
         setLan('ES')
     }
 
@@ -32,7 +32,7 @@ const Resume = () => {
     }, [lan]);
 
     let resume_data;
-    if (idioma == 'ES') {
+    if (idioma === 'ES') {
         resume_data = resume_es;
     } else {
         resume_data = resume_en;
@@ -47,8 +47,8 @@ const Resume = () => {
                     <NavLogo to="/">JoseV</NavLogo>
                 </NavbarContainer>
                 <NavBtn>
-                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'ES')}><img src={imageES}></img></NavBtnLink>
-                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'EN')}><img src={imageEN}></img></NavBtnLink>
+                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'ES')}><img alt="es" src={imageES}></img></NavBtnLink>
+                    <NavBtnLink onClick={() => localStorage.setItem('lan', 'EN')}><img alt="en" src={imageEN}></img></NavBtnLink>
                 </NavBtn>
             </AboutNavbar>
 
@@ -67,23 +67,23 @@ const Resume = () => {
 
                         <Column2>
                             <ImgWrap>
-                                <img className="imgResume" src={ImageOne}></img>
+                                <img className="imgResume" alt="imgResume" src={ImageOne}></img>
                             </ImgWrap>
                         </Column2>
                     </ResumeRow>
                     <ResumeContent>
                         {blocks.map((item, index) => (
                             <>
-                                <ResumeContentTitle>{item.title}</ResumeContentTitle>
+                                <ResumeContentTitle key={index}>{item.title}</ResumeContentTitle>
                                 {item.data.map((item2, i) => (
                                     <>
-                                        <ContentBlock>
+                                        <ContentBlock key={i}>
                                             <ContentTitle>{item2.subtitle}</ContentTitle>
                                             <ContentSubtitle>{item2.center}</ContentSubtitle>
                                             <ContentText>
                                                 {item2.data.map((item3, a) => {
                                                     return (
-                                                        <p>{item3}</p>
+                                                        <p key={a}>{item3}</p>
                                                     )
                                                 })}
                                             </ContentText>

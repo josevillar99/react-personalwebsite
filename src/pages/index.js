@@ -17,7 +17,7 @@ const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     let idioma = localStorage.getItem('lan');
-    if (idioma == null) {
+    if (idioma === null) {
         setLan('ES')
         localStorage.setItem('lan', lan);
     }
@@ -39,7 +39,7 @@ const Home = () => {
     let hero_data;
     let homeObj = [];
    
-    if (idioma == 'ES') {
+    if (idioma === 'ES') {
         project_data = projects_es;
         sidebar_data = sidebar_es;
         hero_data = home_es;

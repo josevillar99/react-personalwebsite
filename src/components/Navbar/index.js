@@ -51,8 +51,8 @@ const Navbar = ({  about, resume, project, contact, lan1, icon1, lan2, icon2, to
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink onClick={() => localStorage.setItem('lan', 'ES')}><img src={icon1}></img></NavBtnLink>
-                        <NavBtnLink onClick={() => localStorage.setItem('lan', 'EN')}><img src={icon2}></img></NavBtnLink>
+                        <NavBtnLink to="" onClick={() => localStorage.setItem('lan', 'ES')}><img alt="es" src={icon1}></img></NavBtnLink>
+                        <NavBtnLink to="" onClick={() => localStorage.setItem('lan', 'EN')}><img alt="en" src={icon2}></img></NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
