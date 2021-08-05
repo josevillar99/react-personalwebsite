@@ -20,7 +20,7 @@ import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
 
 const About = () => {
 
-    scrollToTop();
+    // scrollToTop();
 
     const [lan, setLan] = useState('ES');
     let idioma = localStorage.getItem('lan');

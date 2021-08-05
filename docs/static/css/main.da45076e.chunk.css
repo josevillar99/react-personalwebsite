@@ -1,2 +1,0 @@
-*{box-sizing:border-box;margin:0;padding:0;font-family:"Encode Sans Expanded",sans-serif}#body{width:100%}.imgSection{width:500px;height:500px}.imgAbout{width:350px;height:350px}.imgResume{width:220px}@media screen and (max-width:768px){.imgSection{width:350px;height:350px}.imgAbout{width:300px;height:250px}}.resumeColumn1{border-right:4px solid #000}@media screen and (max-width:650px){.imgResume{display:none}.resumeColumn1{border-right:none}}.carousel-status,.carousel .thumbs-wrapper,.control-dots{visibility:hidden}
-/*# sourceMappingURL=main.da45076e.chunk.css.map */
